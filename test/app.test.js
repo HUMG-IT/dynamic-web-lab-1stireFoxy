@@ -45,7 +45,7 @@ describe('Kiểm thử POST /api/v1/bmi', () => {
   it('phân loại là "Gầy" cho BMI thấp', async () => {
     const res = await request(app)
       .post('/api/v1/bmi')
-      .send({ weight: 45, height: 165 });
+      .send({ weight: 40, height: 165 });
     expect(res.statusCode).toEqual(200);
     expect(res.body.classification).toBe('Gầy');
   });
@@ -53,7 +53,7 @@ describe('Kiểm thử POST /api/v1/bmi', () => {
   it('phân loại là "Thừa cân" cho BMI cao hơn', async () => {
     const res = await request(app)
       .post('/api/v1/bmi')
-      .send({ weight: 75, height: 165 });
+      .send({ weight: 70, height: 165 });
     expect(res.statusCode).toEqual(200);
     expect(res.body.classification).toBe('Thừa cân');
   });
