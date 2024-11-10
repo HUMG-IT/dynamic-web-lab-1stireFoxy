@@ -31,11 +31,3 @@ function classifyBMI(bmi){
 }
 module.exports = {calculateBMI, classifyBMI};
 
-const bmi = [];
-const addbmi = (bmi) => {
-    bmi.push(bmi); 
-};
-const getbmi = () => {
-    return bmi; 
-};
-module.exports = { addbmi, getbmi };

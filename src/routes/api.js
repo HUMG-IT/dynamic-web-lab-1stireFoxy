@@ -22,7 +22,6 @@ const { submitName } = require('../controllers/nameController');
  * @returns {Object} JSON - Trả về thông điệp chào và danh sách tên.
  */
 router.post('/submit', submitName);
-
 /**
  * Route cho endpoint `/bmi`
  * 
@@ -34,5 +33,7 @@ router.post('/submit', submitName);
  * @returns {Object} JSON - Trả về chỉ số BMI và phân loại.
  */
 // TODO: Định nghĩa route POST cho `/bmi`, sử dụng hàm `getBMI` từ `bmiController` để xử lý yêu cầu
+const { getBMI } = require('../bmiController');
+router.post('./bmi', getBMI);
 
 module.exports = router;
