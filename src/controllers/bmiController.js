@@ -6,9 +6,11 @@
 // Xuất hàm getBMI
 
 // Lưu ý: Tham khảo mã trong tệp nameController.js
-const {calculateBMI , classifyBMI} = require('../bmi');
+const bmi = require('../models/bmi');
+const getBMI = (req, res) => {
   const { weight, height } = req.body;
   const bmi = calculateBMI(weight, height);
   const classification = classifyBMI(bmi);
   res.json({ bmi, classification });
+};
 module.exports = { getBMI };
