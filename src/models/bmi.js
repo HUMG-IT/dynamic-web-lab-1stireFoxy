@@ -17,7 +17,7 @@
 function calculateBMI(weight,height){
     let bmi = weight / Math.pow(height / 100 ,2);
     return bmi.toFixed(2);
-}
+};
 function classifyBMI(bmi){
     if (bmi < 18.5){
         return "Gầy";
@@ -28,6 +28,7 @@ function classifyBMI(bmi){
     }else {
         return "Béo phì";
     }
-}
+};
+
 module.exports = {calculateBMI, classifyBMI};
 

@@ -34,6 +34,6 @@ router.post('/submit', submitName);
  * @returns {Object} JSON - Trả về chỉ số BMI và phân loại.
  */
 // TODO: Định nghĩa route POST cho `/bmi`, sử dụng hàm `getBMI` từ `bmiController` để xử lý yêu cầu
-router.post('./bmi', getBMI);
+router.post('/bmi', getBMI);
 
 module.exports = router;

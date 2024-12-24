@@ -21,7 +21,7 @@ describe('Kiểm thử POST /api/v1/submit', () => {
     expect(res.body).toHaveProperty('message', 'Xin chào, John!');
     expect(res.body.names).toContain('John');
   });
-});
+}); 
 
 // Import các model và controller cho BMI
 const { calculateBMI, classifyBMI } = require('../src/models/bmi');
